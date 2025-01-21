@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} {{ page }} {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="pagetitle">
+  <h1>{{ page }}</h1>
+
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+            <div class="card">
+
+              <div class="card-body">
+                <h2 class="card-title"> {{ item.nombre }} </h2>
+
+                  {% if item.nombre %}
+                <p><strong>Nombre:</strong> {{ item.nombre }}</p>
+                  {% endif %}
+                  {% if item.f_fabricacion %}
+                <p><strong>Fecha de fabricación:</strong> {{ item.f_fabricacion }}</p>
+                  {% endif %}
+
+                  {% if item.laboratorio %}
+                <p><strong>Laboratorio:</strong> {{ item.laboratorio }}</p>
+                  {% endif %}
+
+                  {% if item.p_costo %}
+                <p><strong>Precio costo:</strong> {{ item.p_costo }}</p>
+                  {% endif %}
+
+                  {% if item.p_venta %}
+                <p><strong>Precio de venta:</strong> {{ item.p_venta }}</p>
+                  {% endif %}
+
+                  {% if item.especialidad %}
+                <p><strong>Especialidad:</strong> {{ item.especialidad }}</p>
+                  {% endif %}
+
+                  {% if item.ciudad %}
+                <p><strong>Ciudad:</strong> {{ item.ciudad }}</p>
+                  {% endif %}
+                  {% if item.pais %}
+                <p><strong>País:</strong> {{ item.pais }}</p>
+                  {% endif %}
+
+              </div>
+            </div>
+
+      </div> <!-- end col-12-->
+    
+    </div>
+  </section>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
